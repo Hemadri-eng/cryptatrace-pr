@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -22,7 +22,7 @@ body {
 }
 
 .focus-ring:focus-visible {
-  outline: 2px solid #22b8cf;
+  outline: 2px solid #2f6690;
   outline-offset: 2px;
 }
 
