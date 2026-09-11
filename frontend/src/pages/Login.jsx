@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { ShieldAlert, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 
 const DEMO_ACCOUNTS = [
@@ -53,9 +53,6 @@ export default function Login() {
     <div className="min-h-screen bg-paper flex items-center justify-center p-4">
       <div className="relative w-full max-w-md">
         <div className="flex flex-col items-center mb-8">
-          <div className="w-14 h-14 rounded-xl bg-ink-900 flex items-center justify-center mb-4">
-            <ShieldAlert size={26} className="text-cyan-400" strokeWidth={1.8} />
-          </div>
           <h1 className="text-2xl font-display font-semibold text-ink-900 tracking-tight">CRYPTATRACE</h1>
           <p className="text-sm text-ink-600/70 mt-1.5 text-center">solving transaction fraud</p>
         </div>
