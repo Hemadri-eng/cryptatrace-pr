@@ -175,7 +175,7 @@ export default function NewReport() {
         <button
           onClick={() => submit(false)}
           disabled={saving}
-          className="px-4 py-2.5 rounded-md border border-slate-300 text-sm font-medium text-ink-900 hover:bg-slate-50 disabled:opacity-60"
+          className="px-4 py-2.5 rounded-md bg-cyan-500 hover:bg-cyan-600 text-white text-sm font-semibold disabled:opacity-60"
         >
           Save Draft
         </button>
