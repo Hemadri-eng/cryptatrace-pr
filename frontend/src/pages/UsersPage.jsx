@@ -46,7 +46,7 @@ export default function UsersPage() {
         </div>
         <button
           onClick={() => setShowForm((s) => !s)}
-          className="inline-flex items-center gap-2 bg-ink-950 hover:bg-ink-900 text-white text-sm font-medium px-4 py-2 rounded-md"
+          className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 disabled:opacity-60 text-white font-semibold text-sm px-4 py-2 rounded-md">
         >
           <UserPlus size={16} /> Add User
         </button>
