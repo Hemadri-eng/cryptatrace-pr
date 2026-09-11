@@ -1,7 +1,7 @@
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard, FolderOpen, FilePlus2, SearchCode, Waypoints,
-  ShieldCheck, FileBarChart, Building2, Users, Settings, LogOut, ShieldAlert,
+  ShieldCheck, FileBarChart, Building2, Users, Settings, LogOut, Menu,
 } from "lucide-react";
 import { useAuth } from "../context/AuthContext";
 import { useState } from "react";
@@ -59,10 +59,10 @@ export default function AppLayout() {
     <div className="min-h-screen flex bg-paper">
       {/* Mobile top bar */}
       <div className="lg:hidden fixed top-0 inset-x-0 h-14 bg-ink-950 text-white flex items-center justify-between px-4 z-40">
-        <button onClick={() => setMobileOpen(true)} className="text-sm font-semibold tracking-wide">
-          ☰ CRYPTATRACE
+        <button onClick={() => setMobileOpen(true)} className="flex items-center gap-2 text-sm font-semibold tracking-wide focus-ring rounded">
+          <Menu size={18} strokeWidth={1.8} />
+          CRYPTATRACE
         </button>
-        <RiskShield />
       </div>
 
       {/* Sidebar */}
@@ -70,12 +70,9 @@ export default function AppLayout() {
         className={`fixed lg:sticky top-0 h-screen w-64 bg-ink-950 text-white flex flex-col z-50 transition-transform duration-200
         ${mobileOpen ? "translate-x-0" : "-translate-x-full"} lg:translate-x-0`}
       >
-        <div className="flex items-center gap-2.5 px-5 py-5 border-b border-white/10">
-          <RiskShield />
-          <div>
-            <div className="font-display font-semibold text-[15px] tracking-tight leading-none">CRYPTATRACE</div>
-            <div className="text-[11px] text-slate-400 mt-0.5">solving transaction fraud</div>
-          </div>
+        <div className="px-5 py-5 border-b border-white/10">
+          <div className="font-display font-semibold text-[15px] tracking-tight leading-none">CRYPTATRACE</div>
+          <div className="text-[11px] text-slate-400 mt-1">solving transaction fraud</div>
         </div>
 
         <nav className="flex-1 overflow-y-auto px-3 py-4">
@@ -119,14 +116,6 @@ export default function AppLayout() {
           <Outlet />
         </div>
       </main>
-    </div>
-  );
-}
-
-function RiskShield() {
-  return (
-    <div className="w-8 h-8 rounded-md bg-cyan-500/20 border border-cyan-400/30 flex items-center justify-center">
-      <ShieldAlert size={17} className="text-cyan-300" strokeWidth={2} />
     </div>
   );
 }
