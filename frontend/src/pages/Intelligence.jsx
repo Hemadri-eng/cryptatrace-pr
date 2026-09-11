@@ -61,7 +61,7 @@ export default function Intelligence() {
           <button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 disabled:opacity-60 text-ink-950 font-semibold text-sm px-4 py-2.5 rounded-md"
+            className="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-600 disabled:opacity-60 text-white font-semibold text-sm px-4 py-2.5 rounded-md"
           >
             {loading && <Loader2 size={15} className="animate-spin" />}
             Trace
